@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel App</title>
+</head>
+<body>
+
+   <h1>Enter The Place That you want to go</h1>
+   <form onsubmit=" return Client.formHandler(event)" method="post">
+
+    <div>
+        <label for="place">Place</label>
+        <input type="text" name="place" id="place">
+        <div id="place_Error" style="color: red;"></div>
+    </div>
+
+    <div>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date">
+    </div>
+     <div id="date_Error" style="color: red;"></div>
+
+
+
+    <button>Submit</button>
+</form>
+
+<div class="flight_output">
+    <h2 id="RemingDays"></h2>
+    <p class="place"></p>
+    <p class="temp"></p>
+    <p class="max-temp"></p>
+    <p class="min-temp"></p>
+    <p class="weather"></p>
+    <div class="placeImg"></div>
+  </div>
+    
+
+
+  <!-- <script>
+    if('serviceWorker' in navigator){
+        window.addEventListener('load',() =>{
+            navigator.serviceWorker.register('/service-worker.js').then(registration =>{
+                console.log('SW registered: ', registration);
+            }).catch(registrationError =>{
+                console.log('SW registered failed:' ,registrationError);
+            });
+        });
+    }
+</script> -->
+
+</body>
+</html>
